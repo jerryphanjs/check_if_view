@@ -1,9 +1,7 @@
 "use strict";
 (function () {
 
-  /*===================================================
-  Viewport width fit for Tablet and Mobile
-  ===================================================*/
+
   var _ua = (function(u) {
     return {
       Tablet: (u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) || u.indexOf("ipad") != -1 || (u.indexOf("android") != -1 && u.indexOf("mobile") == -1) || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1) || u.indexOf("kindle") != -1 || u.indexOf("silk") != -1 || u.indexOf("playbook") != -1,
@@ -16,9 +14,7 @@
     $("meta[name='viewport']").attr('content', 'width=1100');
   }
 
-  /*===================================================
-  Banner Slider
-  ===================================================*/
+
   $('.c-banner__slider').slick({
     autoplay: true,
     autoplaySpeed: 4000,
@@ -32,10 +28,7 @@
     pauseOnHover: false,
     speed: 3000
   });
-  
-  /*===================================================
-  Slider Service Page
-  ===================================================*/
+
   $('.c-service2__slider').slick({
     slideToShow: 1,
     slideToScroll: 1,
@@ -49,9 +42,7 @@
     prevArrow: '<a class="prev"><img src="./assets/img/service/service_icon_prev.png" alt=""></a>',
     nextArrow: '<a class="next"><img src="./assets/img/service/service_icon_next.png" alt=""></a>'
   });
-  /*===================================================
-  Slider Studio Page
-  ===================================================*/
+  
   $('.c-studio__slider').slick({
     slideToShow: 1,
     slideToScroll: 1,
@@ -65,15 +56,11 @@
     prevArrow: '<a class="p-studio__arr prev "><img src="./assets/img/service/service_icon_prev.png" alt=""></a>',
     nextArrow: '<a class="p-studio__arr next"><img src="./assets/img/service/service_icon_next.png" alt=""></a>'
   });
-  /*===================================================
-  FAQ Toggle
-  ===================================================*/
+ 
   $('.p-service5__faq dt').on('click', function() {
     $(this).next().slideToggle('fast');
   });
-  /*===================================================
-  Button ScrollTop
-  ===================================================*/
+ 
   $('.c-btn__scrollTop').on('click', function(e) {
     e.preventDefault();
     $('html, boy').animate({
@@ -101,9 +88,6 @@
     }
   });
 
-  /*===================================================
-  Circle Menu Center Top Page
-  ===================================================*/
   let anchor = document.querySelectorAll('.c-index1__cnav a');
   let menu = document.querySelectorAll('.c-index1__menu li');
   let center = document.querySelectorAll('.c-index1__center .point');
@@ -130,9 +114,7 @@
     document.getElementById('menuTitle').style.transition = 'all 0.3s ease-out';
     document.getElementById('menuTitle').style.visibility = 'visible';
   }
-  /*===================================================
-  Toggle Modal Service
-  ===================================================*/
+
   const target = document.querySelectorAll('.c-imgtext1__btn');
   const modal = document.querySelector('.c-service2__modal');
   const modalControl = document.querySelectorAll('.c-imgtext1');
@@ -163,10 +145,7 @@
       });
     }
   }
-  
-  /*===================================================
-  Toggle Menu Studio
-  ===================================================*/
+
   let btnClose = $('.c-studio__btnClose');
   let btnOpen = $('.open-menu');
 
@@ -194,9 +173,7 @@
         });
       }); 
     });
-  /*===================================================
-  Form Validate
-  ===================================================*/
+ 
     const _input = $('.c-form__input input');
     const _textArea = $('.c-form__input textarea');
 
@@ -228,9 +205,7 @@
         promptPosition: "topRight"
       });
     }
-  /*===================================================
-  Video Customize
-  ===================================================*/
+
     $('.videoPoster').on('click', function() {
       let poster = $(this);
       let wrapper = poster.closest('.videoWrapper');
